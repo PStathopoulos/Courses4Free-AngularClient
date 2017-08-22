@@ -1,0 +1,14 @@
+
+.label-element{
+  font-weight:600;
+  font-size:15px;
+}
+
+.label-element.glyphicon{
+  font-weight:600;
+  font-size:17px !important;
+}
+
+.course-title{
+  font-size:18px;
+}

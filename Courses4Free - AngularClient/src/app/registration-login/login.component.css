@@ -1,0 +1,15 @@
+form{
+  margin-bottom:30px;
+  width:600px;
+}
+
+.center-form{
+  display:inline-block;
+  position:relative;
+  left:50%;
+  transform:translate(-50%,0);
+}
+
+.title-element{
+  font-family:Impact;
+}

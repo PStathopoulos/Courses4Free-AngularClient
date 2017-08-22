@@ -1,0 +1,41 @@
+<div class="container">
+  <div class='panel panel-primary'>
+      <div class='panel-heading course-title'>
+        {{course.title}}
+      </div>
+      <div class='panel-body'>
+        <div class='row'>
+          <div class='col-md-6'>
+            <div class='row'>
+                    <div class='col-md-2 label-element glyphicon glyphicon-info-sign'><span style='padding-left:3px;'>Description:</span></div>
+                    <div class='col-md-10'>{{course.description}}</div>
+            </div>
+            <hr>
+            <div class='row'>
+              <div class='col-md-2 label-element glyphicon glyphicon-ok-circle'><span style='padding-left:3px;'>Subject:</span></div>
+              <div class='col-md-10'>{{course.subject}}</div>
+          </div>
+          <div class='row'>
+            <div class='col-md-2 label-element glyphicon glyphicon glyphicon-folder-open'><span style='padding-left:3px;'>Category:</span></div>
+            <div class='col-md-10'>{{course.category}}</div>
+          </div>
+          <div class='row'>
+            <div class='col-md-2 label-element glyphicon glyphicon-save'><span style='padding-left:3px;'>UUid:</span></div>
+            <div class='col-md-10'>{{course.UUid}}</div>
+          </div>
+          <div class='col-md-6'>
+            <img class='center-block img-responsive'
+                    [style.width.px]='200'
+                    [style.margin.px]='2'
+                    [src]='course.photoUrl'
+                    [title]='course.title'>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class='panel-footer'>
+      <a class='btn btn-default' (click)='onBack()' style='width:80px; font-weight:600;'>
+        <i class='glyphicon glyphicon-chevron-left'></i> Back
+      </a>
+    </div>
+  </div>

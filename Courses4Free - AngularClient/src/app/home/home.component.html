@@ -1,0 +1,20 @@
+<div class="container" >
+  <div class="jumbotron remove-padding">
+    <div class="row">
+      <div class="glyphicon glyphicon-education item"></div>
+      <h2 class="text-center main-title-element"> COURSES4FREE </h2>
+      <img src="./assets/web_courses_banner.jpg" class="img-responsive  center-block" alt="Courses4Free" >
+    </div>
+  </div>
+</div>
+<div class="container-fluid with-background courses-promoters">
+   <div class="row">
+    <div class="glyphicon glyphicon-bullhorn item2"></div>
+    <h3 class="text-center title-element"> Recent Courses </h3>
+    <div *ngfor='let course of courses' class="col-md-3">
+      <img class="center-block img-responsive"
+              [src]='course.photoUrl'
+              [title]='course.title'>
+   </div>
+ </div>
+</div>

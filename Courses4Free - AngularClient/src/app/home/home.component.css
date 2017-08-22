@@ -1,0 +1,54 @@
+
+
+.jumbotron{
+  margin-top:0;
+  margin-bottom:0;
+}
+
+.absolute-centering {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  }
+
+  .margin-clear{
+    margin-top:0;
+  }
+
+  .item{
+  position:relative;
+  font-size: 130px;
+  left:50%;
+  transform:translate(-50%,0);
+  }
+
+.item2{
+position:relative;
+font-size: 50px;
+left:50%;
+transform:translate(-50%,0)
+}
+
+.remove-padding{
+  padding-top:0px;
+}
+
+.with-background{
+  background-color:skyblue;
+}
+
+.courses-promoters{
+  padding-top:30px;
+  padding-bottom:30px;
+}
+
+.main-title-element{
+
+  font-family:Impact;
+}
+
+.title-element{
+  text-decoration: underline;
+  font-family:Impact;
+}

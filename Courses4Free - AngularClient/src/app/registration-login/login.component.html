@@ -1,0 +1,39 @@
+<div class="container">
+  <h3 class="text-center title-element"> Login Form </h3>
+  <form (ngSubmit)="onLogin()" #f="ngForm" class="center-form">
+    <div class="form-group">
+      <label for="title">Username</label>
+      <input type="text"
+             id="username"
+             class="form-control"
+             required
+             name="username"
+             placeholder='Enter Username'
+             [(ngModel)]="credentials.username"
+             #title="ngModel">
+             <div *ngIf="username.errors && (username.dirty || username.touched)" class="alert alert-danger">
+               <div [hidden]="!username.errors.required">
+              Username is required
+               </div>
+             </div>
+     </div>
+     <div class="form-group">
+       <label for="category">Password</label>
+       <input type="text"
+              class="form-control"
+              id="password"
+              name="password"
+              required
+              placeholder='Enter Password'
+              [(ngModel)]="credentials.password"
+              #category="ngModel">
+              <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
+                <div [hidden]="!password.errors.required">
+               Password is required
+                </div>
+              </div>
+      </div>
+
+     <button type="submit" class="btn btn-primary" [disabled]="!f.form.valid">Submit Credentials</button>
+  </form>
+</div>

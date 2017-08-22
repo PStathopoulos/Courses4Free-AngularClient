@@ -1,0 +1,81 @@
+<div class="container">
+  <h3 class="text-center title-element"> Add Course </h3>
+  <form (ngSubmit)="onCreate()" #f="ngForm" class="center-form">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text"
+             id="title"
+             class="form-control"
+             required
+             name="title"
+             placeholder='Enter Course Title'
+             [(ngModel)]="course.title"
+             #title="ngModel">
+             <div *ngIf="title.errors && (title.dirty || title.touched)" class="alert alert-danger">
+               <div [hidden]="!title.errors.required">
+              Title is required
+               </div>
+             </div>
+     </div>
+     <div class="form-group">
+       <label for="category">Category</label>
+       <input type="text"
+              class="form-control"
+              id="category"
+              name="category"
+              required
+              placeholder='Enter Course Category'
+              [(ngModel)]="course.category"
+              #category="ngModel">
+              <div *ngIf="category.errors && (category.dirty || category.touched)" class="alert alert-danger">
+                <div [hidden]="!category.errors.required">
+               Category is required
+                </div>
+              </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text"
+               class="form-control"
+               id="subject"
+               name="subject"
+               required
+               placeholder='Enter Course Subject'
+               [(ngModel)]="course.subject"
+               #subject="ngModel">
+               <div *ngIf="subject.errors && (subject.dirty || subject.touched)" class="alert alert-danger">
+                 <div [hidden]="!subject.errors.required">
+                Subject is required
+                 </div>
+               </div>
+       </div>
+       <div class="form-group">
+         <label for="description">Description</label>
+         <textarea cols="30" rows="5"
+                class="form-control"
+                id="description"
+                name="description"
+                required
+                 placeholder='Enter Course Description'
+                [(ngModel)]="course.description"
+                #description="ngModel"></textarea>
+                <div *ngIf="description.errors && (description.dirty || description.touched)" class="alert alert-danger">
+                  <div [hidden]="!description.errors.required">
+                 Description is required
+                  </div>
+                </div>
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="text"
+                 class="form-control"
+                 id="price"
+                 name="price"
+                 required
+                 placeholder='Enter Course Price'
+                 [(ngModel)]="course.price"
+                 #price="ngModel">
+         </div>
+     <button type="submit" class="btn btn-primary" [disabled]="!f.form.valid">Submit Course</button>
+  </form>
+</div>
